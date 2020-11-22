@@ -1,7 +1,7 @@
 ---
 title: This is my own blog to solve some quetions
 ---
-Welcome to [Hexo](https://hexo.io/)! This is your very first post. Check [documentation](https://hexo.io/docs/) for more info. If you get any problems when using Hexo, you can find the answer in [troubleshooting](https://hexo.io/docs/troubleshooting.html) or you can ask me on [GitHub](https://github.com/hexojs/hexo/issues).
+这是我分享一些关于地理信息科学专业在所学课程中会遇到的一些问题，也会整理分享自己的一些学习内容。
 
 ## Quick Start
 
