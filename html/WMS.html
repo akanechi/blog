@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewpot" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+  <title>WMS</title>
+	<link rel="stylesheet" href="https://js.arcgis.com/4.17/esri/themes/light/main.css">
+	<script src="https://js.arcgis.com/4.17/"></script>
+	<style type="text/css">
+		html, body, #viewDiv{
+			padding: 0;
+			margin: 0;
+			width: 100%;
+			height: 100%;
+		}
+	</style>
+	<script>
+      require([
+        "esri/Map",
+        "esri/views/MapView",
+        "esri/layers/FeatureLayer"
+      ], function (Map, MapView, FeatureLayer) {
+        var map = new Map({
+                basemap: "satellite", //选择底图,这里使用官方提供的底图
+            });
+
+            //使用地图服务
+            var jiuyuanBlock = new FeatureLayer({
+                //url中放你刚才复制的地址
+                url: "http://localhost:6080/arcgis/rest/services//jiuyuanBlock/MapServer"
+            });
+            //将图层添加到地图中
+            map.add(jiuyuanBlock);
+
+            var view = new MapView({
+                container: "viewDiv", //选择挂载的DOM节点
+                map: map, //选择地图，就选择刚才定义的map
+                center: [109.9, 40.6], //定义地图中心
+                zoom: 12 //定义地图缩放等级
+            });
+      });
+	</script>
+</head>
+<body>
+<div id="viewDiv"></div>
+</body>
+</html>
