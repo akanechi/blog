@@ -105,5 +105,5 @@ theme: cactus
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repo: https://github.com/akanechi/gquestions.github.io
+  repo: https://akanechi.github.io/blog/
   branch: master
